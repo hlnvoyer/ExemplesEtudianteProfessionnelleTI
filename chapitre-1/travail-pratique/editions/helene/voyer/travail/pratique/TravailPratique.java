@@ -1,8 +1,5 @@
 public class TravailPratique {
 
-
-
-
    public static void main(String args[])  {
         // TP signifie Travail Pratique
         // Examen de mi-session
