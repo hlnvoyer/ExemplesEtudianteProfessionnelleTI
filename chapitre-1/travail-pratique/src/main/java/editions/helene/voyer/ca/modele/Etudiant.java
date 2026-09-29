@@ -1,6 +1,8 @@
 package editions.helene.voyer.ca.modele;
 
 public abstract class Etudiant {
+    // le contenu de cette classe est appropriée pour le travail pratique mais pas pour notre
+    // solution logicielle professionnelle
     public String nom;
     public int tp1;
     public int tp2;

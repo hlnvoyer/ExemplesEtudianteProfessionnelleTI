@@ -1,4 +1,4 @@
-package editions.helene.voyer.ca.editions.helene.voyer.ca.business;
+package editions.helene.voyer.ca.business;
 
 public abstract class BaremeNotation {
 
@@ -11,23 +11,28 @@ public static BaremeNotation getInstance() {
 }   
 
 public enum NotationLitterale {
-    A_PLUS,
-    A,
-    A_MINUS,
-    B_PLUS,
-    B,
-    B_MINUS,
-    C_PLUS,
-    C,
-    C_MINUS,
-    D_PLUS,
-    D,
-    E
+      A_PLUS,
+      A,
+      A_MINUS,
+      B_PLUS,
+      B,
+      B_MINUS,
+      C_PLUS,
+      C,
+      C_MINUS,
+      D_PLUS,
+      D,
+      D_MINUS,
+      E,
+      AUCUN
    }
 
   /*         
-   fonctionnement par défaut sera celui du Québec
-  */
+   Le fonctionnement par défaut sera celui du Québec
+   Si cette fonction n'est pas défini dans une classe qui étendra BaremeNotation, le fonctionnement par 
+   défaut sera utilisé défini ci-dessous. Assures-toi que c'est bien la même chose en Ontario, 
+   au Nouveau-Brunswick et dans les autres provinces canadiennes. Même chose à l'international.
+  */  
     public NotationLitterale getNotationLitterale(double notePonderee) {
         NotationLitterale notationLiteraleEnum;
         if (notePonderee >= 90) { // Excellent A+

@@ -4,7 +4,16 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import editions.helene.voyer.ca.modele.Etudiant;
 import editions.helene.voyer.ca.service.FabriqueListeChaineeEtudiant;
-import editions.helene.voyer.ca.editions.helene.voyer.ca.business.BaremeNotation;
+import editions.helene.voyer.ca.business.BaremeNotation;
+/*
+ Finalement avec les fabriques, les services et les objets model et business le monolithe est pas mal plus court.
+ Il ne reste que le calcul des notes pondérée et naviguer dans la liste chaînée. 
+ Les pourcentages des items à calculer et leurs nombres varient pour chaque cours. 
+ Donc une classe abstraite cours avec des implémentations différentes pour premier cycle, 
+ deuxième cycle, troisième cycle, mais aussi dépendant si le cours est libre, obligatoire ou choisi. 
+ Il y aura des cours dont l'horaire est fin de semaine, d'autres avec horaire réduit comme durant la 
+ session d'été et ceux pour une session complète. 
+Le nombre de crédits / unités varient de cours en cours aussi. */
 
 public class TravailPratiqueFabriqueEtudiant {
    public static void main(String args[]) {
