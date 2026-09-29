@@ -37,7 +37,7 @@ cd ExemplesManuscrit
    ./mvn test
 
 📖 À propos du livre et de l'autrice
- * Livre : D'étudiante à professionnelle TI
+ * Livre : [D'étudiante à professionnelle TI](https://www.editionshelenevoyer.ca/boutique)
  * Autrice : Hélène Voyer (éditions Hélène Voyer)
  * Site web & blogue : helenevoyer.ca
  * Discussions & retours : Ouvrez une Issue sur GitHub ou passez par la section discussion du site pour échanger sur les exemples.
