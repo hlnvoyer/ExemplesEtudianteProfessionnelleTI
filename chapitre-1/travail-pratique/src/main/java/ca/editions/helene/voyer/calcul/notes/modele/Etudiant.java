@@ -61,11 +61,11 @@ public abstract class Etudiant {
         return this.examenMiSession;
     }
 
-    public void setExamenFinDeSession(int unExamenFinDeSession) {
+    public void setExamenFinSession(int unExamenFinDeSession) {
         this.examenFinDeSession = unExamenFinDeSession;
     }
 
-    public int getExamenFinDeSession() {
+    public int getExamenFinSession() {
         return this.examenFinDeSession;
     }
 

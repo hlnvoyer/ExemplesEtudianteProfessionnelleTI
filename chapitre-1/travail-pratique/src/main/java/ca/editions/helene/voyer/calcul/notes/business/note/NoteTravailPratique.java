@@ -1,28 +1,32 @@
-package ca.editions.helene.voyer.calcul.notes.business;
+package ca.editions.helene.voyer.calcul.notes.business.note;
 
 public class NoteTravailPratique extends NotePonderee {
     // maximum de points = nombre de questions * poids de chaque question
-    private int maximumPoints;
-    private int note;
+    private double maximumPoints;
+    private double note;
     private double notePourcentage;
 
-    public NoteTravailPratique(int maximumPoints, int note) {
+//             double notePondereeTP = cetEtudiant.getTp1() * 0.1 + cetEtudiant.getTp2() * 0.1
+//               + cetEtudiant.getTp3() * 0.1;
+
+    public NoteTravailPratique(double maximumPoints, double note) {
+        super(maximumPoints, note);
         notePourcentage = note * maximumPoints / 100;
     }
 
-    public int getMaximumPoints() {
+    public double getMaximumPoints() {
         return maximumPoints;
     }
 
-    public void setMaximumPoints(int maximumPoints) {
+    public void setMaximumPoints(double maximumPoints) {
         this.maximumPoints = maximumPoints;
     }
 
-    public int getNote() {
+    public double getNote() {
         return note;
     }
 
-    public void setNote(int note) {
+    public void setNote(double note) {
         this.note = note;
     }
 
