@@ -1,13 +1,15 @@
-package editions.helene.voyer.ca.business;
+package ca.editions.helene.voyer.calcul.notes.business;
 
 public class NotationTresBien extends BaremeNotation {
-    public NotationTresBien() { }  
+    public NotationTresBien() {
+    }
 
-    static final NotationTresBien INSTANCE = new NotationTresBien() { };
+    static final NotationTresBien INSTANCE = new NotationTresBien() {
+    };
 
     public static NotationTresBien getInstance() {
         return INSTANCE;
-    }  
+    }
 
     public NotationLitterale getNotationLitterale(double notePonderee) {
         NotationLitterale notationLiteraleEnum = NotationLitterale.AUCUN;

@@ -1,4 +1,4 @@
-package editions.helene.voyer.ca.modele;
+package ca.editions.helene.voyer.calcul.notes.modele;
 
 public abstract class Cours {
   private String titreCours;
@@ -12,15 +12,15 @@ public abstract class Cours {
 
   public void setTitreCours(String titreCours) {
     this.titreCours = titreCours;
-  } 
-  
+  }
+
   public int getUnites() {
     return unites;
   }
 
   public void setUnites(int unites) {
     this.unites = unites;
-  } 
+  }
 
   public String getCodeCours() {
     return codeCours;

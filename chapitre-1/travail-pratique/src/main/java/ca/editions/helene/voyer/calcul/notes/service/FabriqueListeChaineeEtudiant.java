@@ -1,7 +1,8 @@
-package editions.helene.voyer.ca.service;
+package ca.editions.helene.voyer.calcul.notes.service;
 
 import java.util.LinkedList;
-import editions.helene.voyer.ca.modele.Etudiant;
+
+import ca.editions.helene.voyer.calcul.notes.modele.Etudiant;
 
 public class FabriqueListeChaineeEtudiant {
     static FabriqueListeChaineeEtudiant instance = null;

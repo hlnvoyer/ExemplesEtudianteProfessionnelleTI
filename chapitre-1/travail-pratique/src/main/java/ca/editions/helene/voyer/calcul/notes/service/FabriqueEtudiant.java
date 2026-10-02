@@ -1,6 +1,6 @@
-package editions.helene.voyer.ca.service;
+package ca.editions.helene.voyer.calcul.notes.service;
 
-import editions.helene.voyer.ca.modele.EtudiantPremierCycle;
+import ca.editions.helene.voyer.calcul.notes.modele.EtudiantPremierCycle;
 
 public class FabriqueEtudiant {
     public FabriqueEtudiant() {

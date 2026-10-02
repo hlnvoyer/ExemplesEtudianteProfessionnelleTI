@@ -1,4 +1,4 @@
-package editions.helene.voyer.ca.business;
+package ca.editions.helene.voyer.calcul.notes.business;
 
 public class NotationSatisfaisant extends BaremeNotation {
     public NotationLitterale getNotationLitterale(double notePonderee) {
