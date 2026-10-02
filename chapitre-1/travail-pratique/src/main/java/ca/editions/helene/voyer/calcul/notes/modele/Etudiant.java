@@ -1,6 +1,9 @@
-package editions.helene.voyer.ca.modele;
+package ca.editions.helene.voyer.calcul.notes.modele;
 
 public abstract class Etudiant {
+    // le contenu de cette classe est appropriée pour le travail pratique mais pas
+    // pour notre
+    // solution logicielle professionnelle
     public String nom;
     public int tp1;
     public int tp2;

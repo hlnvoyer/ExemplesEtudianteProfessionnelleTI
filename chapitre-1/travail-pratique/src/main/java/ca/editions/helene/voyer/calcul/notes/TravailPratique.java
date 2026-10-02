@@ -1,4 +1,4 @@
-package editions.helene.voyer.ca.travail.pratique;
+package ca.editions.helene.voyer.calcul.notes;
 
 import java.lang.String;
 
