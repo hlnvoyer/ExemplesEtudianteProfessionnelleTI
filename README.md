@@ -8,9 +8,9 @@ Ce dépôt a été conçu pour guider la transition du monde académique vers le
  * Fournir une base de code prête à exécuter pour expérimenter et pratiquer.
 🛠 Prérequis et environnement technique
 Avant de commencer, assurez-vous d'avoir installé :
- * Java JDK : version 17+ (ou 21 LTS)
- * Outil de build : Maven 3.9+ ou Gradle
- * IDE recommandé : IntelliJ IDEA, Eclipse ou VS Code avec le pack d'extensions Java
+ * Java JDK : version 21 LTS
+ * Outil de build : Maven 3.9+ 
+ * IDE recommandé : VS Code avec le pack d'extensions Java
  * Git : pour cloner et naviguer dans les branches
 
 📂 Structure du projet
@@ -37,7 +37,7 @@ cd ExemplesManuscrit
    ./mvn test
 
 📖 À propos du livre et de l'autrice
- * Livre : D'étudiante à professionnelle TI
+ * Livre : [D'étudiante à professionnelle TI](https://www.editionshelenevoyer.ca/boutique)
  * Autrice : Hélène Voyer (éditions Hélène Voyer)
  * Site web & blogue : helenevoyer.ca
  * Discussions & retours : Ouvrez une Issue sur GitHub ou passez par la section discussion du site pour échanger sur les exemples.
