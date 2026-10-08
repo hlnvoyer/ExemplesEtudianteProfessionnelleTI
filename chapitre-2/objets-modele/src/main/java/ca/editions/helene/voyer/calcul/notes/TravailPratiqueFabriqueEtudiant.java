@@ -1,8 +1,6 @@
 package ca.editions.helene.voyer.calcul.notes;
 
-import java.lang.String;
-
-public class TravailPratique {
+public class TravailPratiqueFabriqueEtudiant {
 
    public enum NotationLitterale {
       A_PLUS,
@@ -56,7 +54,6 @@ public class TravailPratique {
             { "Etudiant 29 ", 85, 85, 80, 90, 95 },
             { "Etudiant 30 ", 80, 80, 85, 85, 90 }
       };
-
       double totalNotes = 0;
       // calculons la note ponderee d'un seul etudiant
       for (int i = 0; i < etudiants.length; i++) {

@@ -1,0 +1,4 @@
+CodeCours,TitreCours,PonderationTP1,PonderationTP2,PonderationTP3,PonderationExamenMiSession,PonderationExamenFinSession
+str101,Structure de Données 1,3,3,0.1,0.1,0.1,0.3,0.4
+str102,Structure de Données 2,3,2,0.1,0.1,0.4,0.4
+str103,Structure de Données 3,3,2,0.1,0.1,0.4,0.4
