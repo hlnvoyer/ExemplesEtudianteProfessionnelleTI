@@ -10,22 +10,22 @@ import java.lang.Double;
 import ca.editions.helene.voyer.calcul.notes.modele.Cours;
 import ca.editions.helene.voyer.calcul.notes.modele.CoursPremierCycle;
 
-public class FabriqueFichierCours {
-    public FabriqueFichierCours() {
+public class PlanificationCours {
+    public PlanificationCours() {
     }
 
-    static final FabriqueFichierCours INSTANCE = new FabriqueFichierCours();
+    static final PlanificationCours INSTANCE = new PlanificationCours();
 
-    public static FabriqueFichierCours getInstance() {
+    public static PlanificationCours getInstance() {
         return INSTANCE;
     }
 
-    
     // écrire les données pour les cours
     public static void creerFichierCours() {
         try {
             BufferedWriter coursSauvegarde = new BufferedWriter(new FileWriter("cours.txt"));
-            coursSauvegarde.write("CodeCours,TitreCours,PonderationTP1,PonderationTP2,PonderationTP3,PonderationExamenMiSession,PonderationExamenFinSession\n");
+            coursSauvegarde.write(
+                    "CodeCours,TitreCours,PonderationTP1,PonderationTP2,PonderationTP3,PonderationExamenMiSession,PonderationExamenFinSession\n");
             coursSauvegarde.write("str101,Structure de Données 1,3,3,0.1,0.1,0.1,0.3,0.4\n");
             coursSauvegarde.write("str102,Structure de Données 2,3,2,0.1,0.1,0.4,0.4\n");
             coursSauvegarde.write("str103,Structure de Données 3,3,2,0.1,0.1,0.4,0.4\n");
@@ -35,12 +35,15 @@ public class FabriqueFichierCours {
         }
     }
 
-   // lire le fichier
-   // 2 options retourner un objet cours seulement ce qui permet de changer le code pour
-   // un fichier à accès direct (fichier .dat) ou retourner une liste chainée de cours 
-   // (demande des changements pour utiliser un fichier à accès direct)
-   // faire les deux pour démontrer les différentes approches de gestion des fichiers
-   public static Cours lireFichierCours() {
+    // lire le fichier
+    // 2 options retourner un objet cours seulement ce qui permet de changer le code
+    // pour
+    // un fichier à accès direct (fichier .dat) ou retourner une liste chainée de
+    // cours
+    // (demande des changements pour utiliser un fichier à accès direct)
+    // faire les deux pour démontrer les différentes approches de gestion des
+    // fichiers
+    public static Cours lireFichierCours() {
         try {
             Cours cours = null;
             BufferedReader coursLecture = new BufferedReader(new FileReader("cours.txt"));
@@ -58,24 +61,27 @@ public class FabriqueFichierCours {
                 titreCours = parties[1];
                 int nombreUnites = Integer.parseInt(parties[2]);
                 nombreDeTravauxPratiques = Integer.parseInt(parties[3]);
-                // ajuster les indices pour les pondérations en fonction du nombre de travaux pratiques
-                for(int i = 0; i < nombreDeTravauxPratiques; i++) {
+                // ajuster les indices pour les pondérations en fonction du nombre de travaux
+                // pratiques
+                for (int i = 0; i < nombreDeTravauxPratiques; i++) {
                     ponderationTP = ponderationTP + Double.parseDouble(parties[4 + i]);
                     // mettre la pondération dans un tableau ou une liste
                     // par exemple, ajouter à une liste temporaire
                     // listePonderationsTP.add(ponderationTP);
                 }
-                // + 2 puisque le code de cours et le titre du cours sont avant les travaux pratiques
+                // + 2 puisque le code de cours et le titre du cours sont avant les travaux
+                // pratiques
                 int positionExamenMiSession = nombreDeTravauxPratiques + 4;
                 ponderationExamenMiSession = Double.parseDouble(parties[positionExamenMiSession]);
                 ponderationExamenFinSession = Double.parseDouble(parties[positionExamenMiSession + 1]);
-                cours = new CoursPremierCycle(codeCours, titreCours, nombreUnites, nombreDeTravauxPratiques, ponderationTP, ponderationExamenMiSession, ponderationExamenFinSession);
+                cours = new CoursPremierCycle(codeCours, titreCours, nombreUnites, nombreDeTravauxPratiques,
+                        ponderationTP, ponderationExamenMiSession, ponderationExamenFinSession);
                 ponderationExamenMiSession = 0.0;
                 ponderationExamenFinSession = 0.0;
             }
             coursLecture.close();
             return cours;
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             return null;
         }

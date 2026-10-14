@@ -10,9 +10,8 @@ ca\editions\helene\voyer\calcul\notes\business\bareme\notation\BaremeNotation$1.
 ca\editions\helene\voyer\calcul\notes\business\bareme\notation\NotationTresBien$1.class
 ca\editions\helene\voyer\calcul\notes\modele\NotePondereeChapitre3.class
 ca\editions\helene\voyer\calcul\notes\business\bareme\notation\BaremeNotation$NotationLitterale.class
-ca\editions\helene\voyer\calcul\notes\service\FabriqueListeChaineeEtudiant.class
 ca\editions\helene\voyer\calcul\notes\business\note\NotePonderee.class
-ca\editions\helene\voyer\calcul\notes\service\FabriqueEtudiant.class
+ca\editions\helene\voyer\calcul\notes\service\AdmissionEtudiant.class
 ca\editions\helene\voyer\calcul\notes\modele\Cours.class
 ca\editions\helene\voyer\calcul\notes\business\note\NotePondereeExamenMiSession.class
 ca\editions\helene\voyer\calcul\notes\business\bareme\notation\NotationPassable.class
@@ -25,4 +24,5 @@ ca\editions\helene\voyer\calcul\notes\service\FabriqueFichierCours.class
 ca\editions\helene\voyer\calcul\notes\business\note\NoteTravailPratique.class
 ca\editions\helene\voyer\calcul\notes\business\bareme\notation\NotationEchec$1.class
 ca\editions\helene\voyer\calcul\notes\business\bareme\notation\BaremeNotation.class
+ca\editions\helene\voyer\calcul\notes\service\InscriptionEtudiant.class
 ca\editions\helene\voyer\calcul\notes\business\bareme\notation\NotationExcellent.class
