@@ -86,4 +86,16 @@ public abstract class Cours {
   public void setPonderationExamenFinSession(double ponderationExamenFinSession) {
     this.ponderationExamenFinSession = ponderationExamenFinSession;
   }
+
+    // Pas une bonne idée car l'objet fait plus que contenir les données sur un cours
+  //mais on va mettre le code pour gérer l'inscription des étudiants
+  public Etudiant inscrireEtudiant(String nomEtudiant, int  noteTp1, int noteTp2, int noteTp3, int noteExamenMiSession, int noteExamenFinSession) {
+    Etudiant etudiant = new EtudiantPremierCycle(nomEtudiant,
+          new TravailPratique(noteTp1), 
+          new TravailPratique(noteTp2), 
+          new TravailPratique(noteTp3), 
+          new ExamenMiSession(noteExamenMiSession),
+          new ExamenFinSession(noteExamenFinSession));
+    return etudiant;
+  }
 }

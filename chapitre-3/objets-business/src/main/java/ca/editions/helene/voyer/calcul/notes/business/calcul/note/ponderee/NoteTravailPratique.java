@@ -1,4 +1,4 @@
-package ca.editions.helene.voyer.calcul.notes.business;
+package ca.editions.helene.voyer.calcul.notes.business.calcul.note.ponderee;
 
 public class NoteTravailPratique extends NotePonderee {
     // maximum de points = nombre de questions * poids de chaque question

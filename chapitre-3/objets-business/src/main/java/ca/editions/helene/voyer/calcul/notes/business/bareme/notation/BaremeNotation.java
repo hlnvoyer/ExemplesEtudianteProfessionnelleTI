@@ -1,4 +1,4 @@
-package ca.editions.helene.voyer.calcul.notes.business;
+package ca.editions.helene.voyer.calcul.notes.business.bareme.notation;
 
 public abstract class BaremeNotation {
 
@@ -13,19 +13,11 @@ public abstract class BaremeNotation {
    }
 
    public enum NotationLitterale {
-      A_PLUS,
-      A,
-      A_MINUS,
-      B_PLUS,
-      B,
-      B_MINUS,
-      C_PLUS,
-      C,
-      C_MINUS,
-      D_PLUS,
-      D,
-      D_MINUS,
-      E,
+      A_PLUS, A, A_MINUS,
+      B_PLUS, B, B_MINUS,
+      C_PLUS, C, C_MINUS,
+      D_PLUS, D,
+      D_MINUS, E,
       AUCUN
    }
 

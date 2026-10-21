@@ -4,22 +4,22 @@ import java.util.LinkedList;
 
 import ca.editions.helene.voyer.calcul.notes.modele.Etudiant;
 
-public class FabriqueListeChaineeEtudiant {
-    static FabriqueListeChaineeEtudiant instance = null;
+public class AdmissionEtudiant {
+    static AdmissionEtudiant instance = null;
 
-    private FabriqueListeChaineeEtudiant() {
+    private AdmissionEtudiant() {
     }
 
-    public static FabriqueListeChaineeEtudiant getInstance() {
+    public static AdmissionEtudiant getInstance() {
         if (instance == null) {
-            instance = new FabriqueListeChaineeEtudiant();
+            instance = new AdmissionEtudiant();
         }
         return instance;
     }
 
     public LinkedList<Etudiant> createListeChaineeEtudiants() {
         LinkedList<Etudiant> listeChaineeEtudiants = new LinkedList<>();
-        FabriqueEtudiant fabrique = FabriqueEtudiant.getInstance();
+        InscriptionEtudiant fabrique = InscriptionEtudiant.getInstance();
         listeChaineeEtudiants.add(fabrique.create("Etudiant 1 ", 75, 55, 88, 79, 85));
         listeChaineeEtudiants.add(fabrique.create("Etudiant 2 ", 65, 75, 78, 74, 81));
         listeChaineeEtudiants.add(fabrique.create("Etudiant 3 ", 85, 90, 80, 70, 95));

@@ -6,12 +6,12 @@ import java.util.LinkedList;
 import ca.editions.helene.voyer.calcul.notes.business.bareme.notation.BaremeNotation;
 import ca.editions.helene.voyer.calcul.notes.modele.Etudiant;
 import ca.editions.helene.voyer.calcul.notes.modele.EtudiantPremierCycle;
-import ca.editions.helene.voyer.calcul.notes.service.FabriqueListeChaineeEtudiant;
 import ca.editions.helene.voyer.calcul.notes.business.note.NoteTravailPratique;
 import ca.editions.helene.voyer.calcul.notes.business.note.NoteExamenMiSession;
 import ca.editions.helene.voyer.calcul.notes.business.note.NoteExamenFinSession;
 import ca.editions.helene.voyer.calcul.notes.modele.Cours;
-import ca.editions.helene.voyer.calcul.notes.service.FabriqueFichierCours;
+import ca.editions.helene.voyer.calcul.notes.service.PlanificationCours;
+import ca.editions.helene.voyer.calcul.notes.service.AdmissionEtudiant;
 
 public class TravailPratiqueFichierSequentiel {
 
@@ -23,55 +23,66 @@ public class TravailPratiqueFichierSequentiel {
       // 3 TPs, l'examen de mi-session et l'examen de fin de session
       // FabriqueListeChaineeEtudiant crée une liste chaînée d'étudiants à partir des
       // données fournies
-      FabriqueFichierCours.creerFichierCours(); // Création du fichier cours si nécessaire
+      PlanificationCours.creerFichierCours(); // Création du fichier cours si nécessaire
       // fichier créé, là on peut le lire pour les cours
-      FabriqueListeChaineeEtudiant fabriqueListe = FabriqueListeChaineeEtudiant.getInstance();
+      AdmissionEtudiant fabriqueListe = AdmissionEtudiant.getInstance();
       LinkedList<Etudiant> etudiants = fabriqueListe.createListeChaineeEtudiants();
       // Calcul des notes pondérées pour chaque étudiant
       BaremeNotation baremeNotation = BaremeNotation.getInstance();
       Iterator<Etudiant> etudiantsIterator = (Iterator<Etudiant>) etudiants.iterator();
-      // public Cours(String codeCours, String titreCours, double[] ponderationTravauxPratique, double ponderationExamenMiSession, double ponderationExamenFinSession) {
-      Cours structureDeDonnees = FabriqueFichierCours.lireFichierCours();
+      // public Cours(String codeCours, String titreCours, double[]
+      // ponderationTravauxPratique, double ponderationExamenMiSession, double
+      // ponderationExamenFinSession) {
+      Cours structureDeDonnees = PlanificationCours.lireFichierCours();
       double totalNotes = 0;
       NoteTravailPratique notePremierTravailPratique = null;
       NoteTravailPratique noteDeuxiemeTravailPratique = null;
       NoteTravailPratique noteTroisiemeTravailPratique = null;
-      //FabriqueNotePonderee fabriqueNotePonderee =  new FabriqueNotePonderee();
+      // FabriqueNotePonderee fabriqueNotePonderee = new FabriqueNotePonderee();
       NoteExamenMiSession noteExamenMiSession = null;
       NoteExamenFinSession noteExamenFinSession = null;
       double notePondereeTP = 0.0;
       double notePondereeMiSession = 0.0;
       double notePondereeFinSession = 0.0;
       double notePonderee = 0.0;
-     while (etudiantsIterator.hasNext()) {
+      while (etudiantsIterator.hasNext()) {
          Etudiant cetEtudiant = (EtudiantPremierCycle) etudiantsIterator.next();
          // déplaçons le calcul des notes dans les classes business NoteTravailPratique,
-         // NoteExamenMiSession et NoteExamenFinSession ainsi que CoursPremierCycle 
+         // NoteExamenMiSession et NoteExamenFinSession ainsi que CoursPremierCycle
          // Ajoutons une fabrique pour créer les notes de travaux pratiques
          notePremierTravailPratique = new NoteTravailPratique(100, cetEtudiant.getTp1());
-         System.out.println("Note du premier travail pratique pour " + cetEtudiant.getNom() + " : " + notePremierTravailPratique.getNote());
-         noteDeuxiemeTravailPratique = new NoteTravailPratique(100,cetEtudiant.getTp2());
-         System.out.println("Note du deuxième travail pratique pour " + cetEtudiant.getNom() + " : " + noteDeuxiemeTravailPratique.getNote());
+         System.out.println("Note du premier travail pratique pour " + cetEtudiant.getNom() + " : "
+               + notePremierTravailPratique.getNote());
+         noteDeuxiemeTravailPratique = new NoteTravailPratique(100, cetEtudiant.getTp2());
+         System.out.println("Note du deuxième travail pratique pour " + cetEtudiant.getNom() + " : "
+               + noteDeuxiemeTravailPratique.getNote());
          noteTroisiemeTravailPratique = new NoteTravailPratique(100, cetEtudiant.getTp3());
-         System.out.println("Note du troisième travail pratique pour " + cetEtudiant.getNom() + " : " + noteTroisiemeTravailPratique.getNote());
+         System.out.println("Note du troisième travail pratique pour " + cetEtudiant.getNom() + " : "
+               + noteTroisiemeTravailPratique.getNote());
          // Ajoutons une fabrique pour créer les notes de travaux pratiques
-         noteExamenMiSession =  new NoteExamenMiSession(100, cetEtudiant.getExamenMiSession());
+         noteExamenMiSession = new NoteExamenMiSession(100, cetEtudiant.getExamenMiSession());
          // pourquoi ça affiche 100.0 au lieu de la note réelle de l'étudiant?
-         System.out.println("Note de l'examen de mi-session pour " + cetEtudiant.getNom() + " : " + noteExamenMiSession.getNote());
+         System.out.println(
+               "Note de l'examen de mi-session pour " + cetEtudiant.getNom() + " : " + noteExamenMiSession.getNote());
          // Ajoutons une fabrique pour créer les notes de travaux pratiques
          noteExamenFinSession = new NoteExamenFinSession(100, cetEtudiant.getExamenFinSession());
          // pourquoi ça affiche 100.0 au lieu de la note réelle de l'étudiant?
-         System.out.println("Note de l'examen de fin de session pour " + cetEtudiant.getNom() + " : " + noteExamenFinSession.getNote());
+         System.out.println("Note de l'examen de fin de session pour " + cetEtudiant.getNom() + " : "
+               + noteExamenFinSession.getNote());
          notePondereeTP = notePremierTravailPratique.getNote() +
-                                 noteDeuxiemeTravailPratique.getNote() +
-                                 noteTroisiemeTravailPratique.getNote();
+               noteDeuxiemeTravailPratique.getNote() +
+               noteTroisiemeTravailPratique.getNote();
          System.out.println("********** note ponderee de l''etudiant " + cetEtudiant.getNom() + " " + notePondereeTP);
-         notePondereeTP = (notePondereeTP / (100 * structureDeDonnees.getNombreDeTravauxPratiques())) * structureDeDonnees.getPonderationTravauxPratique() * 100;
-         System.out.println("Note pondérée des travaux pratiques pour " + cetEtudiant.getNom() + " : " + notePondereeTP);  
+         notePondereeTP = (notePondereeTP / (100 * structureDeDonnees.getNombreDeTravauxPratiques()))
+               * structureDeDonnees.getPonderationTravauxPratique() * 100;
+         System.out
+               .println("Note pondérée des travaux pratiques pour " + cetEtudiant.getNom() + " : " + notePondereeTP);
          notePondereeMiSession = noteExamenMiSession.getNote() * structureDeDonnees.getPonderationExamenMiSession();
-         System.out.println("Note pondérée de l'examen de mi-session pour " + cetEtudiant.getNom() + " : " + notePondereeMiSession);
+         System.out.println(
+               "Note pondérée de l'examen de mi-session pour " + cetEtudiant.getNom() + " : " + notePondereeMiSession);
          notePondereeFinSession = noteExamenFinSession.getNote() * structureDeDonnees.getPonderationExamenFinSession();
-         System.out.println("Note pondérée de l'examen de fin de session pour " + cetEtudiant.getNom() + " : " + notePondereeFinSession);
+         System.out.println("Note pondérée de l'examen de fin de session pour " + cetEtudiant.getNom() + " : "
+               + notePondereeFinSession);
          notePonderee = notePondereeTP + notePondereeMiSession + notePondereeFinSession;
          cetEtudiant.setNotePonderee(notePonderee);
          // récit utilisateur 2 : enlevons le calcul de la notation littérale dans un
