@@ -1,4 +1,4 @@
-package ca.editions.helene.voyer.calcul.notes.business;
+package ca.editions.helene.voyer.calcul.notes.business.calcul.note.ponderee;
 
 public abstract class NotePonderee {
     private double notePourcentage;

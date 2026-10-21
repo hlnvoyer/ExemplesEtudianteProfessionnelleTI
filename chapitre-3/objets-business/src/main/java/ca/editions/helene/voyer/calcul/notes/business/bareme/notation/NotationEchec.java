@@ -1,4 +1,4 @@
-package ca.editions.helene.voyer.calcul.notes.business;
+package ca.editions.helene.voyer.calcul.notes.business.bareme.notation;
 
 public class NotationEchec extends BaremeNotation {
     public NotationEchec() {
