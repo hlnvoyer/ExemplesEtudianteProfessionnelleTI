@@ -1,14 +1,9 @@
-package ca.editions.helene.voyer.calcul.notes.modele;
+package ca.editions.helene.voyer.calcul.notes.business.calcul.note.ponderee;
 
-public class NotePondereeChapitre3 {
+public abstract class NotePonderee {
     private double notePourcentage;
     private double poidsNoteFinale;
 
-    public NotePondereeChapitre3(double notePourcentage, double poidsNoteFinale) {
-        this.notePourcentage = notePourcentage;
-        this.poidsNoteFinale = poidsNoteFinale;
-    }
-    
     public double getPoidsNoteFinale() {
         return poidsNoteFinale;
     }

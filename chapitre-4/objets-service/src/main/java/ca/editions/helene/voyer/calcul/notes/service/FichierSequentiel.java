@@ -1,10 +1,11 @@
 package ca.editions.helene.voyer.calcul.notes.service;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.util.HashMap;
+
+import ca.editions.helene.voyer.calcul.notes.modele.EtudiantCours;
 
 public interface FichierSequentiel {
-    public BufferedReader ouvrirFichier(String nomFichier, String cheminRelatif) throws IOException;
-    
-    public void fermerFichier(BufferedReader fichier) throws IOException;
+    public HashMap<String, EtudiantCours> lireFichier(String nomFichier);
+
+    public void ecrireFichier(String nomFichier, String contenu);
 }

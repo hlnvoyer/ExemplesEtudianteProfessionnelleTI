@@ -1,18 +1,19 @@
 package ca.editions.helene.voyer.calcul.notes.modele;
 
-public abstract class Etudiant {
+public class Etudiant {
     // le contenu de cette classe est appropriée pour le travail pratique mais pas
     // pour notre
     // solution logicielle professionnelle
     public String nom;
-    public int tp1;
-    public int tp2;
-    public int tp3;
-    public int examenMiSession;
-    public int examenFinDeSession;
+    public TravailPratique tp1;
+    public TravailPratique tp2;
+    public TravailPratique tp3;
+    public ExamenMiSession examenMiSession;
+    public ExamenFinSession examenFinDeSession;
     public double notePonderee;
 
-    public Etudiant(String nom, int tp1, int tp2, int tp3, int examenMiSession, int examenFinDeSession) {
+    public Etudiant(String nom, TravailPratique tp1, TravailPratique tp2, 
+        TravailPratique tp3, ExamenMiSession examenMiSession, ExamenFinSession examenFinDeSession) {
         this.nom = nom;
         this.tp1 = tp1;
         this.tp2 = tp2;
@@ -29,43 +30,43 @@ public abstract class Etudiant {
         return this.nom;
     }
 
-    public void setTp1(int unTp1) {
+    public void setTp1(TravailPratique unTp1) {
         this.tp1 = unTp1;
     }
 
-    public int getTp1() {
+    public TravailPratique getTp1() {
         return this.tp1;
     }
 
-    public void setTp2(int unTp2) {
+    public void setTp2(TravailPratique unTp2) {
         this.tp2 = unTp2;
     }
 
-    public int getTp2() {
+    public TravailPratique getTp2() {
         return this.tp2;
     }
 
-    public void setTp3(int unTp3) {
+    public void setTp3(TravailPratique unTp3) {
         this.tp3 = unTp3;
     }
 
-    public int getTp3() {
+    public TravailPratique getTp3() {
         return this.tp3;
     }
 
-    public void setExamenMiSession(int unExamenMiSession) {
+    public void setExamenMiSession(ExamenMiSession unExamenMiSession) {
         this.examenMiSession = unExamenMiSession;
     }
 
-    public int getExamenMiSession() {
+    public ExamenMiSession getExamenMiSession() {
         return this.examenMiSession;
     }
 
-    public void setExamenFinSession(int unExamenFinDeSession) {
+    public void setExamenFinSession(ExamenFinSession unExamenFinDeSession) {
         this.examenFinDeSession = unExamenFinDeSession;
     }
 
-    public int getExamenFinSession() {
+    public ExamenFinSession getExamenFinSession() {
         return this.examenFinDeSession;
     }
 

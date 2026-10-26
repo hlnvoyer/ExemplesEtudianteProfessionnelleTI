@@ -1,27 +1,17 @@
 package ca.editions.helene.voyer.calcul.notes.modele;
 
 public abstract class Cours {
+  // créer et géré par le processus métier GestionCours
   private String codeCours;
   private String titreCours;
-  private String[] prerequis;
+  private Cours[] prerequis;
   private int unites;
-  private int nombreDeTravauxPratiques;
-  private double ponderationTravauxPratique;
-  private double ponderationExamenMiSession;
-  private double ponderationExamenFinSession;
 
-  public Cours(String codeCours, String titreCours, int unites, int nombreDeTravauxPratiques, double ponderationTravauxPratique, double ponderationExamenMiSession, double ponderationExamenFinSession) {
+  public Cours(String codeCours, String titreCours, int unites) {
     this.codeCours = codeCours;
     this.titreCours = titreCours;
     this.unites = unites;
-    this.nombreDeTravauxPratiques = nombreDeTravauxPratiques;
-    this.ponderationTravauxPratique = ponderationTravauxPratique;
-    this.ponderationExamenMiSession = ponderationExamenMiSession;
-    this.ponderationExamenFinSession = ponderationExamenFinSession;
   }
-
-  public Cours() {
-  } 
   
   public String getCodeCours() {
     return codeCours;
@@ -30,15 +20,6 @@ public abstract class Cours {
   public void setCodeCours(String codeCours) {
     this.codeCours = codeCours;
   }
-
-  public String[] getPrerequis() {
-    return prerequis;
-  }
-
-  public void setPrerequis(String[] prerequis) {
-    this.prerequis = prerequis;
-  }
-
   public String getTitreCours() {
     return titreCours;
   }
@@ -55,35 +36,11 @@ public abstract class Cours {
     this.unites = unites;
   }
 
-  public double getPonderationTravauxPratique() {
-    return ponderationTravauxPratique;
+  public Cours[] getPrerequis() {
+    return prerequis;
   }
 
-  public int getNombreDeTravauxPratiques() {
-    return nombreDeTravauxPratiques;
-  }
-
-  public void setNombreDeTravauxPratiques(int nombreDeTravauxPratiques) {
-    this.nombreDeTravauxPratiques = nombreDeTravauxPratiques;
-  }
-
-  public void setPonderationTravauxPratique(double ponderationTravauxPratique) {  
-    this.ponderationTravauxPratique = ponderationTravauxPratique;
-  }
-
-  public double getPonderationExamenMiSession() {
-    return ponderationExamenMiSession;
-  }
-
-  public void setPonderationExamenMiSession(double ponderationExamenMiSession) {
-    this.ponderationExamenMiSession = ponderationExamenMiSession;
-  }
-
-  public double getPonderationExamenFinSession() {
-    return ponderationExamenFinSession;
-  }
-
-  public void setPonderationExamenFinSession(double ponderationExamenFinSession) {
-    this.ponderationExamenFinSession = ponderationExamenFinSession;
+  public void setPrerequis(Cours[] prerequis) {
+    this.prerequis = prerequis;
   }
 }

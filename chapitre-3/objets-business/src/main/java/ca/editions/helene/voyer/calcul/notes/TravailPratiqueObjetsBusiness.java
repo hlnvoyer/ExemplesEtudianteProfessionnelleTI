@@ -30,8 +30,6 @@ public class TravailPratiqueObjetsBusiness {
             // Examen de fin de session
             // Le tableau etudiant contient le nom de l'etudiant suivi de ses notes pour les
             // 3 TPs, l'examen de mi-session et l'examen de fin de session
-            // FabriqueListeChaineeEtudiant crée une liste chaînée d'étudiants à partir des
-            // données fournies
             // Création d'un programme et d'une liste d'étudiants admis à ce programme
             initialiserProgramme();
             // on a un programme avec des cours
