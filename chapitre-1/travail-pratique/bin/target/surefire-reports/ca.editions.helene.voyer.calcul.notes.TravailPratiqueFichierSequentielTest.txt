@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ca.editions.helene.voyer.calcul.notes.TravailPratiqueFichierSequentielTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.110 s -- in ca.editions.helene.voyer.calcul.notes.TravailPratiqueFichierSequentielTest
