@@ -20,5 +20,26 @@
             <version>5.11.0</version>
             <scope>test</scope>
         </dependency>
+        <!-- Jakarta Persistence API -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- EclipseLink (Fournisseur JPA alternatif à Hibernate) -->
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa</artifactId>
+            <version>4.0.2</version> <!-- Version compatible avec Jakarta JPA 3.0 -->
+        </dependency>
+
+
+        <!-- Pilote de base de données SQLite -->
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.47.0.0</version>
+        </dependency>
     </dependencies>
 </project>

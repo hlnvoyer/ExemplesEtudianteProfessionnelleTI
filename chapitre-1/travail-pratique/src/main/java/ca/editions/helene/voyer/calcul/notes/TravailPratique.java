@@ -8,7 +8,7 @@ public class TravailPratique {
       A_PLUS, A, A_MINUS,
       B_PLUS, B, B_MINUS,
       C_PLUS, C, C_MINUS,
-      D_PLUS, D, 
+      D_PLUS, D,
       E
    }
 
@@ -74,7 +74,7 @@ public class TravailPratique {
           * • 60% – 64% : C (2,0) – Satisfaisant
           * • 57% – 59% : C- (1,7) – Passable
           * • 54% – 56% : D+ (1,3) – Passable
-          * • 50% – 53% : D (1,0) – Passable 
+          * • 50% – 53% : D (1,0) – Passable
           * • 50% – 53% : D- (1,0) – Passable (note de passage au 1er cycle)
           * • 0% – 49% : F (0,0) – Échec
           */
