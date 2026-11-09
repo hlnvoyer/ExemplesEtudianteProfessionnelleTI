@@ -1,0 +1,54 @@
+package ca.editions.helene.voyer.calcul.notes.business;
+
+import java.util.ArrayList;
+import ca.editions.helene.voyer.calcul.notes.modele.Cours;
+import ca.editions.helene.voyer.calcul.notes.modele.CoursPremierCycle;
+
+public class GestionCoursProgrammesEtudes {
+    // pour gérer le catalogue des cours et leurs prérequis
+    // pour que l'étudiant puisse consulter les cours et leurs prérequis et
+    // s'inscrire
+    static GestionCoursProgrammesEtudes instance = null;
+    static ArrayList<CoursPremierCycle> coursObligatoires = new ArrayList<CoursPremierCycle>();
+    static ArrayList<CoursPremierCycle> coursOptionnels = new ArrayList<CoursPremierCycle>();
+    static ArrayList<CoursPremierCycle> coursLibres = new ArrayList<CoursPremierCycle>();
+    static ArrayList<CoursPremierCycle> coursPrerequis = new ArrayList<CoursPremierCycle>();
+
+    private GestionCoursProgrammesEtudes() {
+    }
+
+    public static GestionCoursProgrammesEtudes getInstance() {
+        if (instance == null) {
+            instance = new GestionCoursProgrammesEtudes();
+        }
+        return instance;
+    }
+
+    public void ajouterCoursObligatoire(String codeCours, ArrayList<CoursPremierCycle> prerequis) {
+        // Implémentation pour ajouter un cours obligatoire avec ses prérequis
+        // vérifier que le cours est déjà dans la liste
+        // étage AVANT d'ajouter le programme
+
+    }
+
+    public void ajouterCoursOptionnel(String codeCours,  ArrayList<CoursPremierCycle> prerequis) {
+        // Implémentation pour ajouter un cours optionnel avec ses prérequis
+        // vérifier que le cous est déjà dans la liste
+        // étage AVANT d'ajouter le programme
+
+    }
+
+    public void ajouterCoursLibre(String codeCours, ArrayList<CoursPremierCycle> prerequis) {
+        // Implémentation pour ajouter un cours libre avec ses prérequis
+        // vérifier que le cours est déjà dans la liste
+        // étage AVANT d'ajouter le programme
+
+    }
+
+    public void ajouterCoursPrerequis(String codeCours, ArrayList<CoursPremierCycle> prerequis) {
+        // Implémentation pour ajouter des prérequis à un cours existant
+        // vérifier que le cours est déjà dans la liste
+        // étage AVANT d'ajouter le programme
+
+    }
+}
