@@ -4,7 +4,6 @@ public class Etudiant {
     // le contenu de cette classe est appropriée pour le travail pratique mais pas
     // pour notre
     // solution logicielle professionnelle
-    public String nom;
     public TravailPratique tp1;
     public TravailPratique tp2;
     public TravailPratique tp3;
@@ -12,22 +11,13 @@ public class Etudiant {
     public ExamenFinSession examenFinDeSession;
     public double notePonderee;
 
-    public Etudiant(String nom, TravailPratique tp1, TravailPratique tp2, 
-        TravailPratique tp3, ExamenMiSession examenMiSession, ExamenFinSession examenFinDeSession) {
-        this.nom = nom;
+    public Etudiant(String nom, TravailPratique tp1, TravailPratique tp2,
+            TravailPratique tp3, ExamenMiSession examenMiSession, ExamenFinSession examenFinDeSession) {
         this.tp1 = tp1;
         this.tp2 = tp2;
         this.tp3 = tp3;
         this.examenMiSession = examenMiSession;
         this.examenFinDeSession = examenFinDeSession;
-    }
-
-    public void setNom(String unNom) {
-        this.nom = unNom;
-    }
-
-    public String getNom() {
-        return this.nom;
     }
 
     public void setTp1(TravailPratique unTp1) {

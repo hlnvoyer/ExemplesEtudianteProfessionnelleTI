@@ -1,11 +1,25 @@
 package ca.editions.helene.voyer.calcul.notes.modele;
 
 public abstract class Cours {
-  private String titreCours;
+  // créer et géré par le processus métier GestionCours
   private String codeCours;
-  private String[] prerequis;
+  private String titreCours;
+  private Cours[] prerequis;
   private int unites;
 
+  public Cours(String codeCours, String titreCours, int unites) {
+    this.codeCours = codeCours;
+    this.titreCours = titreCours;
+    this.unites = unites;
+  }
+  
+  public String getCodeCours() {
+    return codeCours;
+  }
+
+  public void setCodeCours(String codeCours) {
+    this.codeCours = codeCours;
+  }
   public String getTitreCours() {
     return titreCours;
   }
@@ -22,19 +36,11 @@ public abstract class Cours {
     this.unites = unites;
   }
 
-  public String getCodeCours() {
-    return codeCours;
-  }
-
-  public void setCodeCours(String codeCours) {
-    this.codeCours = codeCours;
-  }
-
-  public String[] getPrerequis() {
+  public Cours[] getPrerequis() {
     return prerequis;
   }
 
-  public void setPrerequis(String[] prerequis) {
+  public void setPrerequis(Cours[] prerequis) {
     this.prerequis = prerequis;
   }
 }
