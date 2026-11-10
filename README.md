@@ -26,9 +26,7 @@ chapitre-9/servlet
 chapitre-10/struts1 et chapitre-10/struts2
 
 🚀 Démarrage rapide
- * Cloner le dépôt :
-   git clone https://github.com/votre-utilisateur/ExemplesManuscrit.git
-cd ExemplesManuscrit
+ * Créer un fork de la branche bac à sable
 
  * Compiler le projet :
    ./mvn clean compile
